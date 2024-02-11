@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Color de fondo celeste */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#tortuga {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    animation: moverTortuga 5s linear infinite;
+}
+
+#dedicatoria {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+@keyframes moverTortuga {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 200px); /* Considerando el ancho de la tortuga */
+    }
+    100% {
+        left: 0;
+    }
+}
